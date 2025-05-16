@@ -1,5 +1,5 @@
 let listaDeNumerosSorteados = []; // Declara uma lista vazia para armazenar os números sorteados
-let numeroLimite = 10; // Define o limite de números que podem ser sorteados
+let numeroLimite = 100; // Define o limite de números que podem ser sorteados
 let numeroSecreto = gerarNumeroSecreto();
 let tentativas = 1; // Variável para contar o número de tentativas
 const botaoReiniciar = document.getElementById('reiniciar');
@@ -9,11 +9,11 @@ const campoEntrada = document.querySelector('input'); // Seleciona o campo de en
 campoEntrada.focus(); // Foca no campo de entrada
 
 function gerarNumeroSecreto() {
-  let numeroSecreto = parseInt(Math.random() * 10 + 1);
+  let numeroSecreto = parseInt(Math.random() * 100 + 1);
   let quantidadeDeElementosNaLista = listaDeNumerosSorteados.length;
 
   if (quantidadeDeElementosNaLista == numeroLimite) {
-        listaDeNumerosSorteados = [];
+        listaDeNumerosSorteados = [];S
   } // Verifica se a lista de números sorteados atingiu o limite
   
   if (listaDeNumerosSorteados.includes(numeroSecreto)) {
@@ -25,7 +25,6 @@ function gerarNumeroSecreto() {
   }
 }
 botaoChutar.disabled = false; // Habilita o botão "Reiniciar"
-
 console.log(numeroSecreto); // Exibe o número secreto no console (apenas para fins de depuração)
 
 function exibirTextoNaTela(tag, texto) {
