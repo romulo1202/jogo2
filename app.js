@@ -9,7 +9,7 @@ const campoEntrada = document.querySelector('input'); // Seleciona o campo de en
 campoEntrada.focus(); // Foca no campo de entrada
 
 function gerarNumeroSecreto() {
-  let numeroSecreto = parseInt(Math.random() * 100 + 1);
+  let numeroSecreto = parseInt(Math.random() * (numeroLimite) + 1);
   let quantidadeDeElementosNaLista = listaDeNumerosSorteados.length;
 
   if (quantidadeDeElementosNaLista == numeroLimite) {
@@ -42,7 +42,7 @@ function exibirTextoNaTela(tag, texto) {
 
 function exibirMensagemInicial() { 
   exibirTextoNaTela('h1', 'Jogo do número secreto'); 
-  exibirTextoNaTela('p', 'Escolha um número entre 1 e 10');
+  exibirTextoNaTela('p', 'Escolha um número entre 1 e ' + numeroLimite);
 }
 
 exibirMensagemInicial(); // Exibe a mensagem inicial
