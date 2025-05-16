@@ -13,7 +13,7 @@ function gerarNumeroSecreto() {
   let quantidadeDeElementosNaLista = listaDeNumerosSorteados.length;
 
   if (quantidadeDeElementosNaLista == numeroLimite) {
-        listaDeNumerosSorteados = [];S
+        listaDeNumerosSorteados = [];
   } // Verifica se a lista de números sorteados atingiu o limite
   
   if (listaDeNumerosSorteados.includes(numeroSecreto)) {
